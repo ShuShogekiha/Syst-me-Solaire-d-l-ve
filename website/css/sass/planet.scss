@@ -129,18 +129,18 @@ main {
         content: "";
         position: absolute;
         border: 1px solid black;
-        width: 350px;
-        left: 10rem;
-        top: 0.8rem;
+        width: calc(30% - 220px);
+        left: 20%;
+        top: 0.9rem;
     }
 
     div.typeChange::after {
         content: "";
         border: 1px solid black;
         position: absolute;
-        width: 350px;
-        right: 10rem;
-        top: 0.8rem;
+        width: calc(30% - 220px);
+        right: 20%;
+        top: 0.9rem;
     }
 }
 
@@ -158,9 +158,9 @@ footer {
         &::before {
             content: "";
             border: 1px solid #C4C4C4;
-            height: 14rem;
+            height: calc(80% - 0px);
             position: absolute;
-            left: 35rem;
+            left: 33%;
             top: 2rem;
         }
 
@@ -169,7 +169,7 @@ footer {
             border: 1px solid #C4C4C4;
             height: 14rem;
             position: absolute;
-            right: 35rem;
+            right: 33%;
             top: 2rem;
         }
     }
@@ -201,10 +201,103 @@ footer {
         &::after {
             content: "";
             border: 1px solid #C4C4C4;
-            width: 1300px;
+            width: calc(100% - 25%);
             position: absolute;
-            left: 15rem;
+            left: 15%;
             top: -0.1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 1400px){
+    header {
+      max-width: 1400px;
+    }
+    main {
+      max-width: 1400px;
+    }
+    
+  }
+
+@media screen and (max-width: 615px) {
+    nav{
+        ul{
+            li {
+                display: none;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 375px) {
+    nav {
+        display: flex;
+        flex-direction: column;
+        ul {
+            position: relative;
+
+            &::before {
+                content: "v";
+                border-top: #ffffff 1px solid;
+                border-bottom: #ffffff 1px solid;
+                top: 10%;
+                right: 1px;
+            }
+
+            li {
+                display: none;
+            }
+        }
+    }
+    main{
+        article{
+            img{
+                margin: auto 1rem;
+            }
+            &.pair{
+                img{
+                    margin-left: -200px;
+                }
+            }
+            &.impair{
+                max-width: 375px;
+                overflow: hidden;
+                img{
+                    margin-right: -200px;
+                }
+            }
+            h2{
+                text-align: center;
+                margin-bottom: 1rem;
+            }
+            button.type_t, button.type_g{
+                margin-left: 0%;
+            }
+            p{
+                font-size: 1rem;
+           } 
+        }
+    }
+
+    footer {
+        div.topo {
+            flex-direction: column;
+            position: static;
+
+            &::before {
+                content: none;
+            }
+
+            &::after {
+                content: none;
+            }
+        }
+
+        p {
+            &::after {
+                left: 0;
+                width: calc(100%);
+            }
         }
     }
 }
