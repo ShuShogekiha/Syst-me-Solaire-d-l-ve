@@ -12,7 +12,7 @@ header {
     background-color: #1B2430;
 
     nav {
-        max-width: 1200px;
+        max-width: 75%;
         justify-content: space-between;
         display: flex;
         margin: auto;
@@ -66,7 +66,7 @@ header {
 
 main {
     article {
-        max-width: 1200px;
+        max-width: 75%;
         margin: auto;
 
         img {
@@ -209,19 +209,24 @@ footer {
     }
 }
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 2560px) {
+
+}
+
+@media screen and (max-width: 1400px) {
     header {
-      max-width: 1400px;
+        max-width: 1400px;
     }
+
     main {
-      max-width: 1400px;
+        max-width: 1400px;
     }
-    
-  }
+
+}
 
 @media screen and (max-width: 615px) {
-    nav{
-        ul{
+    nav {
+        ul {
             li {
                 display: none;
             }
@@ -230,9 +235,15 @@ footer {
 }
 
 @media screen and (max-width: 375px) {
+    * {
+        padding: 0px;
+        margin: 0px;
+    }
+
     nav {
         display: flex;
         flex-direction: column;
+
         ul {
             position: relative;
 
@@ -249,33 +260,53 @@ footer {
             }
         }
     }
-    main{
-        article{
-            img{
-                margin: auto 1rem;
+
+    main {
+        article {
+            img {
+                margin: 5rem auto;
             }
-            &.pair{
-                img{
+
+            &.pair {
+                img {
                     margin-left: -200px;
                 }
             }
-            &.impair{
+
+            &.impair {
                 max-width: 375px;
                 overflow: hidden;
-                img{
+                padding-left: 0.7rem;
+
+                img {
                     margin-right: -200px;
                 }
+
+                p {
+                    margin-right: 0%;
+                }
             }
-            h2{
+
+            h2 {
                 text-align: center;
                 margin-bottom: 1rem;
             }
-            button.type_t, button.type_g{
-                margin-left: 0%;
+
+            button {
+                width: auto;
             }
-            p{
+
+            button.type_t,
+            button.type_g {
+                margin: 1rem 0;
+            }
+
+            p {
+                max-width: 97%;
                 font-size: 1rem;
-           } 
+
+
+            }
         }
     }
 
@@ -294,10 +325,24 @@ footer {
         }
 
         p {
+            margin: 1rem 0;
+
             &::after {
                 left: 0;
                 width: calc(100%);
             }
         }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                width: fit-content;
+            }
+
+        }
+
     }
 }

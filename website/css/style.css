@@ -11,7 +11,7 @@ header {
   background-color: #1B2430;
 }
 header nav {
-  max-width: 1200px;
+  max-width: 75%;
   justify-content: space-between;
   display: flex;
   margin: auto;
@@ -55,7 +55,7 @@ header img {
 }
 
 main article {
-  max-width: 1200px;
+  max-width: 75%;
   margin: auto;
 }
 main article img {
@@ -186,6 +186,10 @@ footer p::after {
   }
 }
 @media screen and (max-width: 375px) {
+  * {
+    padding: 0px;
+    margin: 0px;
+  }
   nav {
     display: flex;
     flex-direction: column;
@@ -204,7 +208,7 @@ footer p::after {
     display: none;
   }
   main article img {
-    margin: auto 1rem;
+    margin: 5rem auto;
   }
   main article.pair img {
     margin-left: -200px;
@@ -212,18 +216,27 @@ footer p::after {
   main article.impair {
     max-width: 375px;
     overflow: hidden;
+    padding-left: 0.7rem;
   }
   main article.impair img {
     margin-right: -200px;
+  }
+  main article.impair p {
+    margin-right: 0%;
   }
   main article h2 {
     text-align: center;
     margin-bottom: 1rem;
   }
-  main article button.type_t, main article button.type_g {
-    margin-left: 0%;
+  main article button {
+    width: auto;
+  }
+  main article button.type_t,
+main article button.type_g {
+    margin: 1rem 0;
   }
   main article p {
+    max-width: 97%;
     font-size: 1rem;
   }
   footer div.topo {
@@ -236,9 +249,20 @@ footer p::after {
   footer div.topo::after {
     content: none;
   }
+  footer p {
+    margin: 1rem 0;
+  }
   footer p::after {
     left: 0;
     width: 100%;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  footer ul li {
+    width: fit-content;
   }
 }
 
